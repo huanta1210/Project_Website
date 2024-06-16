@@ -1,0 +1,341 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 70%;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    color: #444;
+    background-color: #f3f3f3;
+    height: 100vh;
+    padding: 1rem 0 1rem 0;
+  }
+  .header-icons {
+    margin-left: 176px;
+  }
+ .logo {
+    margin-left: 127px;
+ }
+.banner {
+    height: 500px;
+}
+.product-image {
+    height: 500px;
+}
+
+.product-image .image {
+    height: 500px;
+}
+.required::before {
+    content: "* ";
+    color: red;
+}
+
+.login-form input {
+    padding-left: 20px;
+}
+.form-group input {
+    transition: border-color 0.5s, box-shadow 0.5s; 
+}
+/* cart */
+
+.cart {
+    position: relative;
+    display: inline-block;
+}
+
+.badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgb(30 41 59); 
+    color: white;
+    border-radius: 9999px; 
+    height: 1.5rem; 
+    width: 1.5rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem; 
+    font-weight: bold;
+}
+
+/* .login-form, */
+
+.form-group .btn-submit:hover {
+    background-color: #fff;
+    color:#000;
+    transition: color 2s;
+}
+
+.form-group input:focus {
+    border: 1px solid #4CAF50; 
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5); 
+    outline: none; 
+}
+  .login__btn:hover,
+  .login__btn:focus,
+  .btn--sort:hover,
+  .btn--sort:focus {
+    outline: none;
+    color: #777;
+  }
+
+  .search-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .search-input {
+    padding: 0.75rem 2rem 0.75rem 1rem; 
+    width: 300px; 
+    border-radius: 1px;
+    /* border: 1px solid #ccc; */
+    outline: 1px solid #ccc;
+  }
+  .search-input:focus {
+    outline: none;
+    outline: 1px solid #aeb3b3;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #f6f8fb;
+    /* padding: 0.75rem 0.75rem 0.55rem 0.75rem;  */
+    background-color: #2a2828;
+    border-radius: 1px;
+    
+  }
+
+  .product-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-item .add-cart {
+    position: absolute;
+    bottom: -50px; 
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+    opacity: 0;
+}
+
+.product-item:hover .add-cart {
+    bottom: 80px; 
+    opacity: 1;
+} 
+.add-cart button {
+    padding: 0.5rem 1rem;
+    background-color: rgba(150, 146, 146, 0.7); 
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.add-cart button:hover {
+    background-color: rgba(150, 146, 146, 0.7);
+}
+
+.add-cart button i {
+    margin-left: 0.5rem;
+}
+
+.btn-delete {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: rgb(237, 98, 98);
+    color: #f4f8f8;
+}
+/* main */
+/* bảng */
+
+
+/* bảng */
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 15px;
+    /* background: yellow; Màu vàng cho thanh kéo */
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    border-radius: 50px;
+    background: linear-gradient(to right, yellow 0%, yellow 50%, #ddd 50%, #ddd 100%)
+}
+.slider:hover {
+    opacity: 1;
+}
+
+.btn-sort-by {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+  /* footer */
+
+footer {
+    border-top: none;
+    background: #f4f8f8;
+    width: 100%;
+    margin: 1.25rem 0 0;
+    padding: 0 1.25rem 1.25rem;
+}
+
+footer section {
+    flex-flow: row wrap;
+}
+
+footer h2,
+footer h3 {
+    margin: 1.5rem 0 0 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: inherit;
+}
+
+footer li {
+    list-style: none;
+    color: #333;
+    font-size: .7125rem;
+    line-height: 1.1rem;
+    padding-bottom: 0.5rem;
+    width: auto;
+}
+
+.footer-heading a {
+    font-weight: 600;
+}
+
+footer li a {
+    font-weight: 400;
+    font-size: .85rem;
+}
+
+footer .footer-menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer .social-icons {
+    flex: 0 0 21rem;
+    max-width: unset;
+}
+
+footer .footer-email-text {
+    font-size: .85rem;
+    margin: 1.5rem 0;
+    width: auto;
+}
+
+.hiden {
+    height: 1px;
+    width: 1px;
+    text-indent: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+footer form [type="email"] {
+    border: none;
+    padding: 0.425rem;
+    width:  70%;
+    font-size: .875rem;
+    font-family: Arial;
+    border: 1px solid #000;
+}
+
+footer .footer-email-sign-up {
+    margin-bottom: 40px;
+}
+
+footer form .Submit {
+    color: #fff;
+    border: none;
+    background-color: #010101;
+    font-size: 9px;
+    line-height: 5;
+    padding: 0 2em;
+    text-transform: uppercase;
+}
+
+footer form .Submit a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+footer .footer-fanacials a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.footer-fanacials {
+    margin-bottom: 20px;
+    font-size: .85rem;
+    min-width: auto;
+    display: block;
+    font-family: inherit;
+    color: inherit;
+}
+
+p.social-icons {
+    font-size: 1rem;
+    display: inline-block;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+ul.social-icons-list {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.social-icons-list ul li {
+    color: #333;
+    font-size: .7125rem;
+    line-height: 1.1rem;
+    padding-bottom: 0.5rem;
+    font-family: inherit;
+    width: auto;
+}
+footer .footer-list {
+    margin-bottom: 17px;
+}
+.footer-list ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+}
+
+.footer-legal .text-section p {
+    color: #333;
+    font-size: .85rem;
+    line-height: 1.1rem;
+    padding-bottom: 0.5rem;
+    font-family: inherit;
+    width: auto;
+}
+.footer-legal .text-section p a {
+    text-decoration: underline;
+    color: #333;
+}
+  
