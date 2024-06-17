@@ -183,25 +183,20 @@
   ],
   "users": [
     {
-      "email": "huantaph46350@gmail.com",
-      "password": "$2a$10$pnFDfm9t5GgXFaPh8IK0G.sJJKUe7rwMX2IjiU5YU8bWdmSBVJP42",
-      "name": "Trương Huấn",
-      "phone": "0338780106",
-      "id": 1
-    },
-    {
-      "email": "huantaph46350@fpt.edu.vn",
-      "password": "$2a$10$2Dz.gsOarRo0mZC7uzgy0eoR1ZXOCIh8G24cahWpx.dF/EQF5Cyv6",
-      "name": "Anh Thư",
-      "phone": "0338780106",
-      "id": 2
-    },
-    {
+      "id": 1,
       "email": "huantruong1210@gmail.com",
       "password": "$2a$10$n0XSGcdhLu/I3jL5ghDza.mCYVHmZk3/Qru6JCUCrWbdeTpZwTn6e",
       "name": "Trương Huấn",
       "phone": "0338780106",
-      "id": 3
+      "role": "admin"
+    },
+    {
+      "email": "huantaph46350@fpt.edu.vn",
+      "password": "$2a$10$X7QCQ1630jWChMYFA41OUO6.FRl9Uqw4yHixzN8g8RMlrVSAqQL/C",
+      "name": "Trương Anh Huấn",
+      "phone": "0338780106",
+      "role": "user",
+      "id": 2
     }
   ]
 }

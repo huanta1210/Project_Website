@@ -13,6 +13,7 @@ function Register() {
   } = useForm();
 
   const registerForm = async registerLogin => {
+    registerLogin.role = 'user';
     await axios
       .post('http://localhost:3000/register', registerLogin)
       .then(respone => {

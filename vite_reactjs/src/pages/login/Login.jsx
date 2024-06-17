@@ -17,25 +17,38 @@ function Login() {
 
   const onSubmit = async dataLogin => {
     try {
-      const { data } = await axios.post(
+      const resoponse = await axios.post(
         'http://localhost:3000/login',
         dataLogin
       );
+      const { accessToken, user } = resoponse.data;
+      console.log(accessToken, user.role);
 
-      if (!data) {
+      if (!resoponse) {
         toast.error('Lấy dữ liệu không thành công');
         return;
       }
-      localStorage.setItem('user', JSON.stringify(data.user));
-      localStorage.setItem('token', data.accessToken);
+      localStorage.setItem('user', JSON.stringify(user));
+      localStorage.setItem('token', accessToken);
+      localStorage.setItem('role', user.role);
 
-      toast.success('Đăng nhập thành công', {
-        onClose: () => {
-          reset();
-          navigate('/admin/product/list');
-        },
-        autoClose: 1000,
-      });
+      if (user.role === 'admin') {
+        toast.success('Đăng nhập thành công', {
+          onClose: () => {
+            reset();
+            navigate('/admin/product/list');
+          },
+          autoClose: 1000,
+        });
+      } else {
+        toast.success('Đăng nhập thành công', {
+          onClose: () => {
+            reset();
+            navigate('/');
+          },
+          autoClose: 1000,
+        });
+      }
     } catch (error) {
       toast.error('lỗi xử lí trang');
       console.error(error);
